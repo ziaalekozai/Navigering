@@ -11,14 +11,13 @@ namespace Uppgift_2
             DirectoryInfo start_om = new DirectoryInfo(@"C:\Users\88ziaale\Desktop\C# Data");
             DirectoryInfo skrivBord = new DirectoryInfo(@"C:\Users\88ziaale\Desktop\C# Data");
            start: 
-               foreach (var dir in skrivBord.GetDirectories())
-               { 
+                foreach (var dir in skrivBord.GetDirectories()) 
+            { 
                 foreach (var file in skrivBord.GetFileSystemInfos())
                    {
                        Console.WriteLine(file);
                    }
-
-
+                
                 if(Console.ReadKey().Key == ConsoleKey.DownArrow)
                 { 
                     if (skrivBord.ToString() != @"C:\")
@@ -32,14 +31,12 @@ namespace Uppgift_2
                        skrivBord = start_om;
                 }
                 else
-                {
-                       Console.WriteLine();
-                       Console.WriteLine("Du kan bara använda pilen uppåt och pilen neråt");
-                       Console.WriteLine();
-                        goto start;
-
+                {   Console.WriteLine();
+                    Console.WriteLine("Du kan bara använda pilen uppåt och pilen neråt");
+                    Console.WriteLine();
+                    goto start;
                 }
-               }
+            }
         }
     }
 }
