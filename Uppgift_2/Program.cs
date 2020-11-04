@@ -38,25 +38,30 @@ namespace Uppgift_2
    {
        static void Main(string[] args)
        {
-            Console.WriteLine("Hej och vällkomen! \n\nFör att vissa filer trycka på pilen upp och för att vissa folder tryck på pilen ner");
-            Console.WriteLine();
-            DirectoryInfo dir = new DirectoryInfo(@"C:\Users\88ziaale\source\repos\Testing\Testing");
+            //Console.WriteLine("Hej och vällkomen! \n\nFör att vissa filer trycka på pilen upp och för att vissa folder tryck på pilen ner");
+            //Console.WriteLine();
+
+            string path = Directory.GetCurrentDirectory();
+            DirectoryInfo dir = new DirectoryInfo(@"c:\Users");
          
            foreach (var folder in dir.GetDirectories())
             {
-               foreach (var file in dir.GetFiles())
+                Console.WriteLine("{0} \t\t Skapad: {1}", folder.FullName, folder.CreationTime);
+
+                foreach (var file in dir.GetFiles())
                 {
+                    Console.WriteLine("{0}\t Skapad: {1}\tStorlek: {2}kb",file, file.CreationTime, file.Length);
+
                     while (true)
                     {
                      try
                      {
                        if(Console.ReadKey().Key == ConsoleKey.DownArrow)
+                            {
+                                
+                            }
+                            else if(Console.ReadKey().Key == ConsoleKey.UpArrow)
                        {
-                         Console.WriteLine("Folder: {0} \t\t Skapad: {1}", folder.FullName, folder.CreationTime);
-                       }
-                       else if(Console.ReadKey().Key == ConsoleKey.UpArrow)
-                       {
-                       Console.WriteLine("File: {0} \t Skapad: {1}\tStorlek: {2}kb",file.FullName, file.CreationTime, file.Length);
                        }
                      }
                         catch (Exception)
