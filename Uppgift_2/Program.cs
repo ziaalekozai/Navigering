@@ -5,13 +5,13 @@ using System.Linq;
 
 namespace Uppgift_2
 {   /*
-     Raporten: 
-    Jag har försökte göra ett program, 
-    jag har fastnat några gångar då fick jag hjälpt av lärarinna och googlade att hitta låsning 
-    jag har försökte göra min bästa och jag la allt min kunskap som jag fick under den här kursen 
-    till slut likades jag att göra den här programen. 
+     Rapporten: 
+    Jag har försökt att göra ett program, 
+    jag har fastnat några gångar och då fick jag hjälpt av lärarna och googlade för att hitta lösningingar 
+    jag försökte att göra mitt bästa och jag la all min kunskap som jag fått under den här kursen 
+    till slut lyckades jag att göra den här programmet. 
    
-Vad mitt program ska göra!
+Vad mitt program ska göra:
 
     1 kunna visa alla filer i en folder
 
@@ -45,7 +45,7 @@ Vad mitt program ska göra!
             Console.WriteLine("     *   Välkommen till Navigeraren!   * ");
             Console.WriteLine("     * * * * * * * * * * * * * * * * * * ");
             Console.WriteLine("____________________________________________________");
-            Console.WriteLine("Du kan bara använda pil kannapor för att navigera\n\nTryck på enter knappen att gå vidar: "); 
+            Console.WriteLine("Du kan bara använda pilknappen för att navigera\n\nTryck på enterknappen att gå vidare: "); 
             Console.Read();
             Navigerare navi = new Navigerare(Directory.GetCurrentDirectory());
             int valrad = 0;
